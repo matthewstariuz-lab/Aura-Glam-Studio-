@@ -211,9 +211,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 22px;
-    padding: 44px 10% 58px;
+    gap: 28px;
+    padding: 60px 8% 70px;
     background:
         radial-gradient(ellipse at 18% 10%, rgba(216, 187, 143, .28), transparent 42%),
         linear-gradient(135deg, #f7f1e8 0%, #eee2d1 52%, #f8f3ec 100%);
@@ -242,11 +241,17 @@
     font-weight: 500;
 }
 
-.corporate-grid {
+/* Fila 1: dos tarjetas de video en grid */
+.corporate-videos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 22px;
-    align-items: stretch;
+    gap: 24px;
+    width: 100%;
+    max-width: 1180px;
+}
+
+/* Fila 2: jingle ancho completo */
+.corporate-jingle-row {
     width: 100%;
     max-width: 1180px;
 }
@@ -255,37 +260,35 @@
     background: linear-gradient(145deg, rgba(255, 255, 255, .68), rgba(250, 242, 230, .3));
     border: 1px solid rgba(161, 126, 82, .24);
     border-radius: 18px;
-    padding: 20px 20px 16px;
-    min-height: 380px;
+    padding: 24px 24px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
 }
 
 .corporate-card h3 {
-    font-size: clamp(2rem, 2.5vw, 2.7rem);
+    font-size: clamp(1.8rem, 2.2vw, 2.6rem);
     line-height: 1.08;
     letter-spacing: -0.04em;
     color: #1d1a18;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
+    align-self: flex-start;
 }
 
-.video-shell {
-    flex: 0 0 auto;
-    width: min(270px, 100%);
-    margin: 0 auto;
-    border-radius: 18px;
+/* Tarjetas de video: aspect ratio vertical */
+.corporate-video-card .video-shell {
+    width: min(260px, 100%);
+    border-radius: 16px;
     overflow: hidden;
     background: #1a1715;
     border: 1px solid rgba(0,0,0,0.12);
-    /* Relación de aspecto vertical 9:16 */
     aspect-ratio: 9 / 16;
     box-shadow: 0 12px 40px rgba(0,0,0,.25);
 }
 
-.video-shell video {
+.corporate-video-card .video-shell video {
     display: block;
     width: 100%;
     height: 100%;
@@ -293,37 +296,57 @@
     background: #1a1715;
 }
 
+/* Tarjeta jingle: layout horizontal */
 .corporate-jingle-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    min-height: 120px;
+}
+
+.corporate-jingle-card h3 {
+    margin-bottom: 6px;
+    white-space: nowrap;
 }
 
 .corporate-jingle-card p {
-    margin: 0 0 18px;
-    font-size: 1.05rem;
-    color: rgba(29,26,24,0.8);
+    margin: 0 0 0;
+    font-size: 1rem;
+    color: rgba(29,26,24,0.7);
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
+    white-space: nowrap;
+}
+
+.jingle-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.jingle-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
 }
 
 .jingle-player {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 14px 12px;
+    padding: 14px 18px 12px;
     border-radius: 16px;
     background: rgba(236, 214, 177, 0.72);
     border: 1px solid rgba(88, 77, 62, 0.12);
-    margin-bottom: 18px;
-    margin-top: auto;
 }
 
 .play-toggle,
 .volume-btn {
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
     border: none;
     border-radius: 50%;
     background: transparent;
@@ -333,13 +356,15 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .timecode {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: #1d1a18;
     min-width: 86px;
     font-family: 'Poppins', sans-serif;
+    flex-shrink: 0;
 }
 
 .progress-bar {
@@ -354,7 +379,7 @@
 .progress-bar span {
     position: absolute;
     inset: 0 auto 0 0;
-    width: 55%;
+    width: 0%;
     border-radius: inherit;
     background: rgba(29,26,24,0.9);
 }
@@ -362,18 +387,45 @@
 .jingle-name {
     display: flex;
     align-items: center;
-    min-height: 68px;
+    min-height: 52px;
     border: 1px solid rgba(78, 64, 45, 0.26);
-    border-radius: 16px;
-    padding: 18px 20px;
+    border-radius: 14px;
+    padding: 14px 20px;
     background: rgba(255,255,255,0.18);
-    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
     color: #1d1a18;
     font-family: 'Cormorant Garamond', serif;
 }
 
 .corporate-card audio {
     display: none;
+}
+
+/* Responsive corporate */
+@media (max-width: 860px) {
+    .corporate-videos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .corporate-jingle-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        min-height: auto;
+    }
+    .corporate-jingle-card h3,
+    .corporate-jingle-card p {
+        white-space: normal;
+    }
+    .jingle-inner {
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .corporate-videos-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .manual-showcase {
@@ -495,10 +547,6 @@
 }
 
 @media (max-width: 900px) {
-    .corporate-grid {
-        grid-template-columns: 1fr;
-    }
-
     .manual-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }

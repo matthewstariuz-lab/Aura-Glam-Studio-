@@ -119,31 +119,48 @@
         </div>
     </section>
 
-    <section class="corporate-showcase" aria-label="Video corporativo y jingle de Aura Glam Studio">
+    <section class="corporate-showcase" aria-label="Videos y jingle de Aura Glam Studio">
         <div class="corporate-header">
-            <h2>Video Publicitario y Jingle</h2>
+            <h2>Videos y Jingle</h2>
             <p>Conoce nuestra historia y escucha nuestro jingle</p>
         </div>
-        <div class="corporate-grid">
+
+        <!-- Fila 1: dos tarjetas de video -->
+        <div class="corporate-videos-grid">
             <div class="corporate-card corporate-video-card reveal">
                 <h3>Video Publicitario</h3>
                 <div class="video-shell">
                     <video controls playsinline preload="metadata" poster="img/imagen negocio.jpg">
-                        <source src="MULTIMEDIA/videocorporativo.mp4" type="video/mp4">
+                        <source src="MULTIMEDIA/Publicitario.mp4" type="video/mp4">
                         Tu navegador no admite la reproducción de videos.
                     </video>
                 </div>
             </div>
+            <div class="corporate-card corporate-video-card reveal">
+                <h3>Elevator Pitch</h3>
+                <div class="video-shell">
+                    <video controls playsinline preload="metadata" poster="img/imagen negocio.jpg">
+                        <source src="MULTIMEDIA/Elevator Pitch.mp4" type="video/mp4">
+                        Tu navegador no admite la reproducción de videos.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 2: jingle ancho completo -->
+        <div class="corporate-jingle-row">
             <div class="corporate-card corporate-jingle-card reveal">
                 <h3>Nuestro Jingle</h3>
-                <p>Descripción</p>
-                <div class="jingle-player">
-                    <button type="button" class="play-toggle" aria-label="Reproducir jingle">▶</button>
-                    <span class="timecode">0:00 / 0:50</span>
-                    <div class="progress-bar"><span></span></div>
-                    <button type="button" class="volume-btn" aria-label="Volumen">◉</button>
+                <p>La melodía que nos identifica</p>
+                <div class="jingle-inner">
+                    <div class="jingle-player">
+                        <button type="button" class="play-toggle" aria-label="Reproducir jingle">▶</button>
+                        <span class="timecode">0:00 / 0:50</span>
+                        <div class="progress-bar"><span></span></div>
+                        <button type="button" class="volume-btn" aria-label="Volumen">◉</button>
+                    </div>
+                    <div class="jingle-name">Aura Glam Jingle</div>
                 </div>
-                <div class="jingle-name">nombre de la canción</div>
                 <audio preload="auto">
                     <source src="MULTIMEDIA/AuraSongJNGLE.mp3" type="audio/mpeg">
                 </audio>
