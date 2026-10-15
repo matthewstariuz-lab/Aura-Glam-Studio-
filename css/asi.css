@@ -296,41 +296,33 @@
     background: #1a1715;
 }
 
-/* Tarjeta jingle: layout horizontal */
+/* Tarjeta jingle: layout centrado */
 .corporate-jingle-card {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 40px;
+    text-align: center;
+    gap: 16px;
     width: 100%;
-    min-height: 120px;
 }
 
 .corporate-jingle-card h3 {
-    margin-bottom: 6px;
-    white-space: nowrap;
+    align-self: center;
+    margin-bottom: 2px;
 }
 
 .corporate-jingle-card p {
-    margin: 0 0 0;
+    margin: 0;
     font-size: 1rem;
     color: rgba(29,26,24,0.7);
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    white-space: nowrap;
 }
 
 .jingle-inner {
-    flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 14px;
-}
-
-.jingle-title-block {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    flex-shrink: 0;
 }
 
 .jingle-player {
@@ -406,19 +398,6 @@
     .corporate-videos-grid {
         grid-template-columns: 1fr 1fr;
         gap: 16px;
-    }
-    .corporate-jingle-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        min-height: auto;
-    }
-    .corporate-jingle-card h3,
-    .corporate-jingle-card p {
-        white-space: normal;
-    }
-    .jingle-inner {
-        width: 100%;
     }
 }
 
