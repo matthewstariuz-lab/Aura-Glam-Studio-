@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú — Aura Glam Studio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="1025x1025">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body class="pagina-menu">
+
+    <!-- NAVBAR -->
+    <header>
+        <nav id="navbar">
+            <a href="index.html" class="nav-logo">
+                <img src="img/Logoblanco.png.png" alt="Aura Glam Studio" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html"    class="nav-link">Inicio</a></li>
+                <li><a href="nosotros.html" class="nav-link">Quiénes somos</a></li>
+                <li><a href="menu.html"     class="nav-link activo-link">Menú</a></li>
+                <li><a href="contacto.html" class="nav-link">Contáctanos</a></li>
+            </ul>
+            <div class="nav-derecha">
+                <button class="btn-carrito" id="btnCarrito" aria-label="Carrito de compras">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
+                    <span class="carrito-badge" id="carritoBadge">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="nav-mobile" id="navMobile">
+            <a href="index.html"    class="nav-link-mobile">Inicio</a>
+            <a href="nosotros.html" class="nav-link-mobile">Quiénes somos</a>
+            <a href="menu.html"     class="nav-link-mobile">Menú</a>
+            <a href="contacto.html" class="nav-link-mobile">Contáctanos</a>
+        </div>
+    </header>
+
+    <!-- ENCABEZADO DE PÁGINA -->
+    <section class="page-hero-crema">
+        <span class="seccion-tag">NUESTRO CATÁLOGO</span>
+        <h1>Menú</h1>
+    </section>
+
+    <main class="menu-contenido">
+        <div class="menu-tabs-wrapper">
+            <div class="tabs menu-tabs" role="tablist" aria-label="Categorías del menú">
+                <button class="tab activo-tab" id="tabServicios" type="button" role="tab" aria-selected="true" aria-controls="servicios">
+                    Servicios
+                </button>
+                <button class="tab" id="tabProductos" type="button" role="tab" aria-selected="false" aria-controls="productos" tabindex="-1">
+                    Productos
+                </button>
+            </div>
+            <div class="menu-intro reveal">
+                <div class="menu-intro-content menu-intro-servicios">
+                    <h2>Lo que hacemos</h2>
+                    <p>Cuidamos cada detalle para ofrecerte una experiencia de belleza personalizada.</p>
+                </div>
+                <div class="menu-intro-content menu-intro-productos">
+                    <h2>Lo que ofrecemos</h2>
+                    <p>Productos seleccionados para complementar tu rutina de belleza en casa.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="servicio-showcase servicio--corte" id="servicios" role="tabpanel" aria-labelledby="tabServicios" aria-label="Servicios de Aura Glam Studio">
+            <div class="servicio-panel reveal-left">
+                <div class="servicio-intro reveal-left">
+                    <span class="servicio-numero" id="servicioNumero" aria-hidden="true">01</span>
+                    <div class="servicio-detalle">
+                        <span class="servicio-kicker"><span id="servicioIndice">01</span> / SERVICIOS</span>
+                        <h2 id="servicioTitulo">Corte y<br>peinado</h2>
+                        <p class="servicio-subtitulo" id="servicioSubtitulo">Estilo y transformación</p>
+                        <p class="servicio-descripcion" id="servicioDescripcion">
+                            Cortes personalizados, cepillado y planchado, peinados para eventos y ondas con acabados profesionales.
+                        </p>
+                        <a class="servicio-cta" href="contacto.html">Conocer servicio <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+
+                <nav class="servicio-nav reveal-left" aria-label="Elegir servicio">
+                    <button class="servicio-nav-item activo" type="button" data-servicio="0" aria-pressed="true">
+                        <span>01</span> Corte y peinado
+                    </button>
+                    <button class="servicio-nav-item" type="button" data-servicio="1" aria-pressed="false">
+                        <span>02</span> Tratamientos capilares
+                    </button>
+                    <button class="servicio-nav-item" type="button" data-servicio="2" aria-pressed="false">
+                        <span>03</span> Manicure y pedicure
+                    </button>
+                    <button class="servicio-nav-item" type="button" data-servicio="3" aria-pressed="false">
+                        <span>04</span> Maquillaje y belleza
+                    </button>
+                </nav>
+            </div>
+
+            <img
+                class="servicio-modelo reveal-right"
+                id="servicioModelo"
+                src="img/modelo1.png"
+                alt="Resultado de peinado profesional"
+            >
+
+            <div class="servicio-resultados reveal-right">
+                <div class="resultados-encabezado">
+                    <span>RESULTADOS</span>
+                    <span class="resultado-tipo" id="resultadoTipo">VIDEO</span>
+                </div>
+                <div class="resultado-visor" id="resultadoVisor" aria-live="polite"></div>
+                <div class="resultado-controles">
+                    <button class="resultado-flecha" type="button" id="resultadoAnterior" aria-label="Resultado anterior">←</button>
+                    <span class="resultado-contador" id="resultadoContador">01 / 04</span>
+                    <button class="resultado-flecha" type="button" id="resultadoSiguiente" aria-label="Siguiente resultado">→</button>
+                </div>
+            </div>
+
+        </section>
+
+    <!-- PRODUCTOS -->
+    <section class="productos-section fondo-blanco" id="productos" role="tabpanel" aria-labelledby="tabProductos" hidden>
+        <div class="productos-grid">
+            <article class="prod-card prod-card--serum reveal">
+                <div class="prod-media">
+                    <div class="visual-wrap">
+                        <img class="visual" src="img/SERUMCAPILARVISUAL.png" alt="Sérum capilar" />
+                    </div>
+                </div>
+                <div class="prod-card__content">
+                    <span class="prod-badge prod-badge--natural">Natural</span>
+                    <h3>Sérum capilar</h3>
+                    <p>Nutrición profunda para cabellos dañados o secos. Resultados desde la primera aplicación.</p>
+                    <button class="btn-agregar" data-producto="Sérum capilar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        Añadir al carrito
+                    </button>
+                </div>
+            </article>
+
+            <article class="prod-card prod-card--shampoo reveal">
+                <div class="prod-media">
+                    <div class="visual-wrap">
+                        <img class="visual" src="img/SHAMPOOVISUAL.png" alt="Shampoo profesional" />
+                    </div>
+                </div>
+                <div class="prod-card__content">
+                    <span class="prod-badge prod-badge--premium">Premium</span>
+                    <h3>Shampoo profesional</h3>
+                    <p>Limpieza suave sin sulfatos, enriquecido con proteínas para un cabello brillante y saludable.</p>
+                    <button class="btn-agregar" data-producto="Shampoo profesional">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        Añadir al carrito
+                    </button>
+                </div>
+            </article>
+
+            <article class="prod-card prod-card--aceite reveal">
+                <div class="prod-media">
+                    <div class="visual-wrap">
+                        <img class="visual" src="img/ACEITECAPILARVISUAL.png" alt="Aceite capilar" />
+                    </div>
+                </div>
+                <div class="prod-card__content">
+                    <span class="prod-badge prod-badge--favorite">Favorito</span>
+                    <h3>Aceite capilar</h3>
+                    <p>Brillo, suavidad y protección en un solo producto. Ideal como tratamiento de noche.</p>
+                    <button class="btn-agregar" data-producto="Aceite capilar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        Añadir al carrito
+                    </button>
+                </div>
+            </article>
+
+            <article class="prod-card prod-card--crema reveal">
+                <div class="prod-media">
+                    <div class="visual-wrap">
+                        <img class="visual" src="img/CREMAFACIALVISUAL.png" alt="Crema facial" />
+                    </div>
+                </div>
+                <div class="prod-card__content">
+                    <span class="prod-badge prod-badge--skincare">Skincare</span>
+                    <h3>Crema facial</h3>
+                    <p>Hidratación y protección para el cuidado diario del rostro. Fórmula ligera y de rápida absorción.</p>
+                    <button class="btn-agregar" data-producto="Crema facial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        Añadir al carrito
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer footer-simple">
+        <div class="footer-socials" aria-label="Redes sociales">
+            <a class="footer-social-link" href="https://instagram.com/Auraglamstudio_cali" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <span class="footer-social-icon" role="img" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 8.4a7.1 7.1 0 0 1-4.4-1.5v8.3a5.6 5.6 0 1 1-4.8-5.5v3.1a2.5 2.5 0 1 0 1.7 2.4V2.5h3.1c.2 2.1 1.9 3.8 4.4 4.1z"/></svg></span>
+            <span class="footer-social-icon" role="img" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.5 8.5H13V6.7c0-.7.4-.9.8-.9h1.7V3.2l-2.3-.1c-2.5 0-3 1.9-3 3.1v2.3H8.4v2.8h1.8v7.2H13v-7.2h2.1z"/></svg></span>
+            <span class="footer-social-icon" role="img" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.1a3 3 0 0 0-2.1-2.2C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7.1 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.9 3 3 0 0 0 2.1 2.2c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.2 31 31 0 0 0 .5-4.9 31 31 0 0 0-.5-4.9zM9.8 15.4V8.6l5.8 3.4z"/></svg></span>
+        </div>
+        <div class="footer-simple-row">
+            <div class="footer-brand-block">
+                <img src="img/Logoblanco.png.png" alt="Aura Glam Studio" class="footer-logo-img">
+            </div>
+
+            <div class="footer-center">
+                <span>© 2026</span><br>
+                <span>Aura Glam Studio</span>
+            </div>
+
+            <div class="footer-contact-list">
+                <a class="footer-contact-item" href="mailto:auraglamstudio.official@gmail.com">
+                    <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+                    <span>auraglamstudio.official<wbr>@gmail.com</span>
+                </a>
+                <div class="footer-contact-item">
+                    <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <a href="https://wa.me/573235461229" target="_blank" rel="noreferrer">+57 323 546 1229</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    <a href="https://instagram.com/Auraglamstudio_cali" target="_blank" rel="noreferrer">@Auraglamstudio_cali</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Av. Roosevelt #44 37 2 Bis, San Fernando, Cali, Valle del Cauca</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copyright">© 2026 Aura Glam Studio. Todos los derechos reservados.</span>
+            <div class="footer-legal"><span>Política de privacidad</span><span>Términos y condiciones</span></div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

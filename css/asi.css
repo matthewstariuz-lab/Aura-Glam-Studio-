@@ -1,0 +1,623 @@
+/* ==========================================
+   AURA GLAM STUDIO — asi.css
+   Estilos de asi.html (Nosotros completo)
+   Fusión de: nosotros.css + mision.css
+========================================== */
+
+/* ── NAVEGACIÓN ── */
+#navbar {
+    background: transparent;
+}
+#navbar .nav-logo-img,
+#navbar .nav-link {
+    color: #fff;
+}
+#navbar .nav-link.activo-link,
+#navbar .nav-link:hover {
+    color: var(--dorado-claro);
+}
+/* ── QUIÉNES SOMOS ── */
+.nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 130px 8% 80px;
+    background: url('../img/fondorojo.jpeg') center / cover no-repeat;
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 100vh;
+}
+
+.nosotros-imagen {
+    flex: 1;
+    min-width: 260px;
+    max-width: 420px;
+    position: relative;
+}
+.nosotros-imagen img {
+    width: 100%;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-lg);
+    transition: transform .6s ease;
+}
+.nosotros-imagen:hover img { transform: scale(1.02); }
+
+.img-badge {
+    position: absolute;
+    bottom: -18px; right: -18px;
+    background: var(--dorado);
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 14px 22px;
+    border-radius: 14px;
+    box-shadow: var(--sombra-md);
+}
+
+/* Tarjeta verde oscura sobre el texto */
+.nosotros-texto {
+    flex: 1;
+    min-width: 260px;
+    background: linear-gradient(145deg, rgba(49, 60, 37, .86), rgba(24, 37, 25, .72) 58%, rgba(30, 22, 18, .78));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radio);
+    padding: 36px 40px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.30);
+    border: 1px solid rgba(255,255,255,.10);
+}
+.nosotros-texto h2 {
+    font-size: clamp(52px, 5vw, 68px);
+    color: white;
+    margin-bottom: 18px;
+}
+.nosotros-texto p {
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(255,255,255,.92);
+    margin-bottom: 18px;
+}
+/* Segundo párrafo dorado brillante */
+.nosotros-texto p:nth-of-type(2) {
+    color: #E8C97A;
+    font-weight: 500;
+    text-shadow:
+        0 0 10px rgba(232,201,122,.7),
+        0 0 25px rgba(232,201,122,.4),
+        0 0 50px rgba(232,201,122,.2);
+}
+
+.check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    background: var(--verde);
+    color: white;
+    border-radius: 50%;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+/* ── VALORES ── */
+.valores {
+    position: relative;
+    padding: 70px 10%;
+    background:
+        linear-gradient(rgba(27, 20, 17, 0.42), rgba(27, 20, 17, 0.42)),
+        url('../img/nuestrosvalores.png') center/cover no-repeat;
+    text-align: center;
+}
+
+.valores::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(27, 20, 17, 0.18);
+    pointer-events: none;
+}
+
+.valores > * {
+    position: relative;
+    z-index: 1;
+}
+
+.valores-header h2 {
+    font-size: 52px;
+    color: #ffffff;
+    margin-bottom: 60px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+.valores-header .seccion-tag {
+    color: #f3e1c5;
+}
+.valores-grid {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.valor-card {
+    flex: 1;
+    min-width: 230px;
+    max-width: 320px;
+    background: linear-gradient(145deg, rgba(92, 58, 43, 0.78), rgba(45, 27, 21, 0.58));
+    border: 1px solid rgba(245, 239, 230, 0.26);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: var(--radio);
+    padding: 44px 36px;
+    box-shadow: var(--sombra-sm);
+    text-align: left;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.valor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-lg);
+}
+.valor-card:nth-child(2) {
+    background: linear-gradient(145deg, rgba(145, 31, 38, 0.8), rgba(70, 18, 23, 0.58));
+}
+.valor-card:nth-child(3) {
+    background: linear-gradient(145deg, rgba(43, 87, 29, 0.8), rgba(20, 48, 25, 0.58));
+}
+.valor-num {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+.valor-card h3 {
+    font-size: 28px;
+    color: #f5efe6;
+    margin-bottom: 12px;
+}
+.valor-card p {
+    font-size: 15px;
+    line-height: 26px;
+    color: rgba(245, 239, 230, 0.86);
+}
+
+/* Retrasos reveal valores */
+.valores-grid .valor-card:nth-child(1) { transition-delay: .0s; }
+.valores-grid .valor-card:nth-child(2) { transition-delay: .12s; }
+.valores-grid .valor-card:nth-child(3) { transition-delay: .24s; }
+
+/* ── CORPORATE AUDIO + VIDEO ── */
+.corporate-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 44px 10% 58px;
+    background:
+        radial-gradient(ellipse at 18% 10%, rgba(216, 187, 143, .28), transparent 42%),
+        linear-gradient(135deg, #f7f1e8 0%, #eee2d1 52%, #f8f3ec 100%);
+}
+
+.corporate-header {
+    text-align: center;
+    max-width: 820px;
+}
+
+.corporate-header h2 {
+    font-size: clamp(2.3rem, 3.5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #1d1a18;
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+.corporate-header p {
+    font-size: clamp(1.1rem, 2vw, 1.8rem);
+    color: rgba(29, 26, 24, 0.82);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.corporate-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1180px;
+}
+
+.corporate-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, .68), rgba(250, 242, 230, .3));
+    border: 1px solid rgba(161, 126, 82, .24);
+    border-radius: 18px;
+    padding: 20px 20px 16px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.corporate-card h3 {
+    font-size: clamp(2rem, 2.5vw, 2.7rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    color: #1d1a18;
+    margin-bottom: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+.video-shell {
+    flex: 0 0 auto;
+    width: min(270px, 100%);
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #1a1715;
+    border: 1px solid rgba(0,0,0,0.12);
+    /* Relación de aspecto vertical 9:16 */
+    aspect-ratio: 9 / 16;
+    box-shadow: 0 12px 40px rgba(0,0,0,.25);
+}
+
+.video-shell video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #1a1715;
+}
+
+.corporate-jingle-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.corporate-jingle-card p {
+    margin: 0 0 18px;
+    font-size: 1.05rem;
+    color: rgba(29,26,24,0.8);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+}
+
+.jingle-player {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 14px 12px;
+    border-radius: 16px;
+    background: rgba(236, 214, 177, 0.72);
+    border: 1px solid rgba(88, 77, 62, 0.12);
+    margin-bottom: 18px;
+    margin-top: auto;
+}
+
+.play-toggle,
+.volume-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #1d1a18;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timecode {
+    font-size: 0.9rem;
+    color: #1d1a18;
+    min-width: 86px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(29,26,24,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 55%;
+    border-radius: inherit;
+    background: rgba(29,26,24,0.9);
+}
+
+.jingle-name {
+    display: flex;
+    align-items: center;
+    min-height: 68px;
+    border: 1px solid rgba(78, 64, 45, 0.26);
+    border-radius: 16px;
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.18);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    color: #1d1a18;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.corporate-card audio {
+    display: none;
+}
+
+.manual-showcase {
+    min-height: 590px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 42px;
+    padding: 76px 7.5%;
+    color: #f5eee5;
+    background:
+        linear-gradient(rgba(18, 12, 8, .48), rgba(18, 12, 8, .58)),
+        url('../img/FONDODEMANUALCORPORATIVO.png') center / cover no-repeat;
+}
+
+.manual-header {
+    text-align: center;
+}
+
+.manual-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #d7ad76;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .42em;
+}
+
+.manual-header h2 {
+    color: #f5eee5;
+    font-size: clamp(3rem, 5vw, 4.6rem);
+    font-weight: 500;
+    letter-spacing: -.04em;
+    line-height: 1;
+}
+
+.manual-header p {
+    margin-top: 16px;
+    color: rgba(245, 238, 229, .9);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    font-style: italic;
+}
+
+.manual-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
+.manual-card {
+    position: relative;
+    min-height: 255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 42px 18px 35px;
+    overflow: hidden;
+    border: 1px solid rgba(221, 187, 144, .82);
+    border-radius: 16px;
+    color: #f5eee5;
+    background: linear-gradient(145deg, rgba(31, 22, 15, .66), rgba(20, 14, 10, .54));
+    box-shadow: inset 0 1px 0 rgba(255, 244, 228, .12);
+    text-align: center;
+    transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
+}
+
+.manual-card:hover,
+.manual-card:focus-visible {
+    transform: translateY(-6px);
+    background: linear-gradient(145deg, rgba(51, 36, 23, .78), rgba(26, 18, 12, .68));
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .28), inset 0 1px 0 rgba(255, 244, 228, .18);
+}
+
+.manual-card:focus-visible {
+    outline: 2px solid #d7ad76;
+    outline-offset: 4px;
+}
+
+.manual-number {
+    position: absolute;
+    top: 19px;
+    left: 22px;
+    color: #d7ad76;
+    font-size: 13px;
+    letter-spacing: .16em;
+}
+
+.manual-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 20px;
+    color: #d7ad76;
+}
+
+.manual-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.35rem, 1.8vw, 1.8rem);
+    line-height: 1.1;
+}
+
+.manual-arrow {
+    position: absolute;
+    right: 22px;
+    bottom: 17px;
+    color: #d7ad76;
+    font-size: 25px;
+    line-height: 1;
+    transition: transform .3s ease;
+}
+
+.manual-card:hover .manual-arrow,
+.manual-card:focus-visible .manual-arrow {
+    transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+    .corporate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .manual-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .manual-card:last-child {
+        grid-column: 1 / -1;
+        width: calc((100% - 22px) / 2);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .manual-showcase {
+        min-height: auto;
+        gap: 30px;
+        padding: 68px 6%;
+    }
+
+    .manual-eyebrow {
+        font-size: 10px;
+        letter-spacing: .3em;
+    }
+
+    .manual-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .manual-card,
+    .manual-card:last-child {
+        grid-column: auto;
+        width: 100%;
+        min-height: 180px;
+    }
+}
+
+/* ── MISIÓN Y VISIÓN ── */
+.mision-vision {
+    padding: 70px 10%;
+    background: url('../img/fondomisionvision.png') center/cover no-repeat;
+    text-align: center;
+}
+.mv-header {
+    margin-bottom: 60px;
+}
+.mv-header h2 {
+    font-size: 52px;
+    color: var(--crema);
+}
+.mv-grid {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mv-card {
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.22), rgba(0, 0, 0, 0.38));
+    border: 1px solid rgba(200,160,80,.2);
+    border-radius: var(--radio);
+    padding: 50px 44px;
+    max-width: 500px;
+    flex: 1;
+    min-width: 260px;
+    text-align: left;
+    transition: background var(--transicion), transform var(--transicion);
+}
+.mv-card:hover {
+    background: linear-gradient(145deg, rgba(32, 32, 32, 0.28), rgba(0, 0, 0, 0.44));
+    transform: translateY(-8px);
+}
+.mv-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 26px;
+}
+.mv-icon-mision { background: var(--rojo); }
+.mv-icon-vision { background: var(--verde); }
+
+.mv-card h3 {
+    font-size: 36px;
+    color: var(--crema);
+    margin-bottom: 18px;
+}
+.mv-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+/* Retrasos reveal misión/visión */
+.mv-grid .mv-card:nth-child(1) { transition-delay: .0s; }
+.mv-grid .mv-card:nth-child(2) { transition-delay: .15s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .nosotros { flex-direction: column; gap: 50px; padding-top: 175px; }
+    .nosotros-texto h2 { font-size: 52px; }
+    .img-badge { bottom: -12px; right: -10px; }
+    .mv-grid { flex-direction: column; align-items: center; }
+    .valores-header h2,
+    .mv-header h2 { font-size: 42px; }
+}
+@media (max-width: 640px) {
+    .nosotros,
+    .valores,
+    .mision-vision { padding: 70px 6%; }
+    .nosotros { padding-top: 150px; }
+    .nosotros-texto h2 { font-size: 44px; }
+    .valores-header h2,
+    .mv-header h2 { font-size: 36px; }
+    .valores-grid { flex-direction: column; align-items: center; }
+    .valor-card { max-width: 100%; }
+    .mv-card { padding: 36px 28px; }
+}

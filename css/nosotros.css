@@ -1,0 +1,206 @@
+/* ==========================================
+   AURA GLAM STUDIO — nosotros.css
+   Estilos exclusivos de nosotros.html
+========================================== */
+
+/* ── ENCABEZADO DE PÁGINA ── */
+.page-hero {
+    height: 320px;
+    background: var(--cafe-oscuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+.page-hero h1 {
+    font-size: 62px;
+    color: var(--crema);
+    letter-spacing: -1px;
+}
+
+/* ── QUIÉNES SOMOS ── */
+.nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 110px 10%;
+    background: var(--blanco);
+    flex-wrap: wrap;
+}
+.nosotros-imagen {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+}
+.nosotros-imagen img {
+    width: 100%;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-lg);
+    transition: transform .6s ease;
+}
+.nosotros-imagen:hover img { transform: scale(1.02); }
+
+.img-badge {
+    position: absolute;
+    bottom: -18px; right: -18px;
+    background: var(--dorado);
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 18px 28px;
+    border-radius: 14px;
+    box-shadow: var(--sombra-md);
+}
+
+.nosotros-texto {
+    flex: 1;
+    min-width: 280px;
+}
+.nosotros-texto h2 {
+    font-size: 52px;
+    color: var(--cafe-oscuro);
+    margin-bottom: 22px;
+}
+.nosotros-texto p {
+    font-size: 17px;
+    line-height: 32px;
+    color: var(--gris-texto);
+    margin-bottom: 22px;
+}
+
+.check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cafe-medio);
+}
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    background: var(--verde);
+    color: white;
+    border-radius: 50%;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+/* ── VALORES ── */
+.valores {
+    position: relative;
+    padding: 100px 10%;
+    background:
+        linear-gradient(rgba(27, 20, 17, 0.42), rgba(27, 20, 17, 0.42)),
+        url('../img/nuestrosvalores.png') center/cover no-repeat;
+    text-align: center;
+}
+
+.valores::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(27, 20, 17, 0.18);
+    pointer-events: none;
+}
+
+.valores > * {
+    position: relative;
+    z-index: 1;
+}
+.valores-header h2 {
+    font-size: 52px;
+    color: #f5efe6;
+    margin-bottom: 60px;
+}
+
+.valores-header .seccion-tag {
+    color: #d9c7a0;
+}
+
+.valores-grid {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.valor-card {
+    flex: 1;
+    min-width: 230px;
+    max-width: 320px;
+    background: linear-gradient(145deg, rgba(92, 58, 43, 0.78), rgba(45, 27, 21, 0.58));
+    border: 1px solid rgba(245, 239, 230, 0.26);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: var(--radio);
+    padding: 44px 36px;
+    box-shadow: var(--sombra-sm);
+    text-align: left;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.valor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-lg);
+}
+.valor-card:nth-child(2) {
+    background: linear-gradient(145deg, rgba(145, 31, 38, 0.8), rgba(70, 18, 23, 0.58));
+}
+.valor-card:nth-child(3) {
+    background: linear-gradient(145deg, rgba(43, 87, 29, 0.8), rgba(20, 48, 25, 0.58));
+}
+.valor-num {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+.valor-card h3 {
+    font-size: 28px;
+    color: #f5efe6;
+    margin-bottom: 12px;
+}
+.valor-card p {
+    font-size: 15px;
+    line-height: 26px;
+    color: rgba(245, 239, 230, 0.86);
+}
+
+/* Retrasos reveal */
+.valores-grid .valor-card:nth-child(1) { transition-delay: .0s; }
+.valores-grid .valor-card:nth-child(2) { transition-delay: .12s; }
+.valores-grid .valor-card:nth-child(3) { transition-delay: .24s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .nosotros { flex-direction: column; gap: 50px; }
+    .nosotros-texto h2 { font-size: 42px; }
+    .img-badge { bottom: -12px; right: -10px; }
+    .page-hero h1 { font-size: 46px; }
+}
+@media (max-width: 640px) {
+    .nosotros, .valores { padding: 70px 6%; }
+    .nosotros-texto h2, .valores-header h2 { font-size: 36px; }
+    .valores-grid { flex-direction: column; align-items: center; }
+    .valor-card { max-width: 100%; }
+    .page-hero { height: 260px; }
+    .page-hero h1 { font-size: 36px; }
+}

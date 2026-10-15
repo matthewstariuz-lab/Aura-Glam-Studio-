@@ -1,0 +1,878 @@
+/* ==========================================
+   AURA GLAM STUDIO — contacto.css
+   Estilos exclusivos de contacto.html
+========================================== */
+
+/* ── ENCABEZADO ── */
+#navbar {
+    background: #2D1B15;
+}
+#navbar .nav-link {
+    color: #fff;
+}
+#navbar .nav-link.activo-link,
+#navbar .nav-link:hover {
+    color: var(--dorado-claro);
+}
+.contacto-hero {
+    height: auto;
+    background: var(--crema);
+    border-bottom: 1px solid rgba(0, 0, 0, .06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 160px 10% 60px;
+}
+.contacto-hero h1 {
+    font-size: 60px;
+    color: var(--cafe-oscuro);
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+.contacto-hero p {
+    font-size: 18px;
+    color: var(--cafe-medio);
+}
+
+/* ── SECCIÓN PRINCIPAL ── */
+.contacto-seccion {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
+    gap: 24px;
+    padding: 58px 6% 64px;
+    background: #2D1B15;
+}
+.contacto-grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+.contacto-card {
+    background: #3A261E;
+    border: 1px solid #5A3E32;
+    border-radius: 20px;
+    padding: 24px 22px;
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    transition: background var(--transicion), transform var(--transicion);
+}
+.contacto-card:hover {
+    background: #432d23;
+    transform: translateY(-8px);
+}
+
+.contacto-icono {
+    width: 50px; height: 50px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+}
+.contacto-icono svg { width: 24px; height: 24px; }
+
+.whatsapp-color  { background: rgba(31,58,5,.5);    color: #5ddc82; }
+.instagram-color { background: rgba(158,0,0,.35);   color: #ff8fa3; }
+.ubicacion-color { background: rgba(184,148,90,.25);color: var(--dorado-claro); }
+
+.contacto-card h3 {
+    font-size: 24px;
+    color: var(--crema);
+    margin-bottom: 10px;
+}
+.contacto-card p {
+    font-size: 13px;
+    line-height: 21px;
+    color: #a09890;
+    margin-bottom: 18px;
+}
+.contacto-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dorado-claro);
+    transition: color var(--transicion);
+}
+.contacto-link:hover { color: white; }
+
+/* Retrasos reveal */
+.contacto-grid .contacto-card:nth-child(1) { transition-delay: .0s; }
+.contacto-grid .contacto-card:nth-child(2) { transition-delay: .12s; }
+.contacto-grid .contacto-card:nth-child(3) { transition-delay: .24s; }
+
+/* Mini tarjetas de contacto bajo el mapa */
+.contacto-grid .contacto-card {
+    padding: 18px 20px;
+    min-height: 0;
+    border-radius: 16px;
+}
+.contacto-grid .contacto-icono {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    margin: 0 auto 10px;
+}
+.contacto-grid .contacto-icono svg {
+    width: 20px;
+    height: 20px;
+}
+.contacto-grid .contacto-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.contacto-grid .contacto-card p {
+    margin-bottom: 8px;
+    font-size: 11px;
+    line-height: 17px;
+}
+.contacto-grid .contacto-link {
+    font-size: 12px;
+}
+
+/* FORMULARIO DE RESERVA */
+.reserva-panel {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: none;
+    width: min(100%, 980px);
+    margin: 0;
+    padding: 32px;
+    background: #d9c9b2;
+    border: 1px solid #5A3E32;
+    border-radius: 20px;
+}
+.reserva-heading {
+    margin-bottom: 22px;
+    text-align: center;
+}
+.reserva-heading .seccion-tag {
+    color: #2D1B15;
+}
+.reserva-heading h2 {
+    margin-top: 8px;
+    color: #2b2118;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    -webkit-text-stroke: 1px #c9a86a;
+    paint-order: stroke fill;
+    text-shadow: 0 0 8px rgba(201, 168, 106, .34), 0 0 18px rgba(201, 168, 106, .16);
+}
+.reserva-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 16px;
+}
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-field-full,
+.privacy-check,
+.reserva-button {
+    grid-column: 1 / -1;
+}
+.form-field label {
+    color: #2b2118;
+    font-size: .84rem;
+    font-weight: 500;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    border: 1px solid #5A3E32;
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: #f4e9dc;
+    color: #2b2118;
+    font: inherit;
+    outline: none;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+.form-field select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #C9A86A 50%), linear-gradient(135deg, #C9A86A 50%, transparent 50%);
+    background-position: calc(100% - 18px) 52%, calc(100% - 13px) 52%;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #C9A86A;
+    box-shadow: 0 0 0 3px rgba(201, 168, 106, .14);
+}
+.form-field textarea {
+    min-height: 108px;
+    resize: vertical;
+}
+.productos-seleccionados {
+    padding: 12px 14px;
+    border: 1px solid rgba(238, 218, 190, .36);
+    border-radius: 8px;
+    background: rgba(255, 247, 236, .08);
+    color: #fff8ef;
+}
+.productos-seleccionados h3 {
+    margin-bottom: 6px;
+    color: #ead7b9;
+    font-size: 12px;
+    font-weight: 600;
+}
+.productos-seleccionados ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+}
+.productos-seleccionados li {
+    padding: 4px 9px;
+    border: 1px solid rgba(238, 218, 190, .24);
+    border-radius: 999px;
+    background: rgba(255, 247, 236, .08);
+    color: rgba(250, 241, 230, .9);
+    font-size: 10px;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: rgba(43, 33, 24, .58);
+}
+.privacy-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2b2118;
+    font-size: .82rem;
+}
+.privacy-check input {
+    width: 16px;
+    height: 16px;
+    accent-color: #C9A86A;
+}
+.reserva-button {
+    justify-self: center;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 28px;
+    background: #C9A86A;
+    color: #2D1B15;
+    cursor: pointer;
+    font: 600 .78rem 'Poppins', sans-serif;
+    letter-spacing: .12em;
+    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.reserva-button:hover {
+    background: #dec285;
+    box-shadow: 0 12px 26px rgba(201, 168, 106, .2);
+    transform: translateY(-2px);
+}
+
+/* MAPA */
+.contacto-mapa {
+    width: 100%;
+    max-width: 1120px;
+    height: 330px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #5A3E32;
+    border-radius: 20px;
+}
+.ubicacion-panel {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
+}
+.ubicacion-panel .contacto-card {
+    height: 100%;
+}
+.ubicacion-panel .contacto-mapa {
+    margin: 0;
+}
+.contacto-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: sepia(.18) saturate(.85) contrast(1.05);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .contacto-hero h1 { font-size: 46px; }
+    .contacto-seccion {
+        display: flex;
+        flex-direction: column;
+    }
+    .contacto-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin: 0;
+    }
+    .contacto-card {
+        width: 100%;
+    }
+    .reserva-panel { margin-top: 30px; }
+    .ubicacion-panel { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    .contacto-hero { padding: 130px 6% 48px; }
+    .contacto-hero h1 { font-size: 36px; }
+    .contacto-seccion {
+        display: flex;
+        flex-direction: column;
+        padding: 70px 6%;
+    }
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .contacto-card { max-width: 100%; width: 100%; }
+    .reserva-panel { margin-top: 58px; padding: 30px 20px; }
+    .reserva-form { grid-template-columns: 1fr; gap: 18px; }
+    .form-field-full,
+    .privacy-check,
+    .reserva-button { grid-column: auto; }
+    .reserva-button { width: 100%; }
+    .contacto-mapa { height: 320px; margin-top: 50px; }
+}
+
+/* ── PÍLDORAS DE CATEGORÍA ── */
+#campoCategoria {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categoria-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Cada píldora individual */
+.categoria-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(184,148,90,.15);
+    border: 1.5px solid var(--dorado);
+    color: var(--cafe-oscuro);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: background var(--transicion), box-shadow var(--transicion), transform var(--transicion);
+    cursor: default;
+    user-select: none;
+}
+
+/* Alumbra al pasar el ratón */
+.categoria-pill:hover {
+    background: rgba(184,148,90,.30);
+    box-shadow: 0 4px 18px rgba(184,148,90,.35);
+    transform: translateY(-2px);
+}
+
+/* Botón X dentro de la píldora */
+.categoria-pill-x {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(158,0,0,.15);
+    color: var(--rojo);
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background var(--transicion), transform var(--transicion);
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.categoria-pill-x:hover {
+    background: var(--rojo);
+    color: white;
+    transform: scale(1.15);
+}
+
+/* Botón + para agregar otra categoría */
+.categoria-add {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(31,58,5,.12);
+    border: 1.5px dashed var(--verde);
+    color: var(--verde);
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
+    text-decoration: none;
+    transition: background var(--transicion), transform var(--transicion), box-shadow var(--transicion);
+    flex-shrink: 0;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 2px;
+}
+
+.categoria-add:hover {
+    background: var(--verde);
+    color: white;
+    transform: scale(1.12) rotate(90deg);
+    box-shadow: 0 4px 14px rgba(31,58,5,.3);
+}
+
+/* ── ÍCONO CORREO ── */
+.correo-color {
+    background: rgba(184,148,90,.25);
+    color: var(--dorado-claro);
+}
+
+/* ── NUEVO DISEÑO DE CONTACTO ── */
+#navbar {
+    background: linear-gradient(90deg, rgba(30, 17, 12, .76), rgba(30, 17, 12, .2));
+    box-shadow: none;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+.contacto-fondo {
+    position: relative;
+    isolation: isolate;
+    background:
+        linear-gradient(rgba(25, 14, 10, .28), rgba(25, 14, 10, .36)),
+        url('../img/FONDOCONTACTANOS.png') center / cover no-repeat;
+}
+
+.contacto-hero {
+    padding: 190px 6% 26px;
+    background: transparent;
+    border: 0;
+}
+
+.contacto-hero .seccion-tag {
+    color: #ead7b9;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+}
+
+.contacto-hero h1 {
+    color: #f5eee5;
+    font-size: clamp(42px, 5vw, 58px);
+    letter-spacing: -1.5px;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, .24);
+}
+
+.contacto-hero p {
+    color: rgba(250, 241, 230, .88);
+    font-size: 15px;
+}
+
+.contacto-seccion {
+    width: min(100%, 1208px);
+    margin: 0 auto;
+    padding: 0 24px 64px;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+    gap: 18px;
+    background: transparent;
+}
+
+.ubicacion-panel {
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+}
+
+.contacto-card,
+.reserva-panel {
+    color: #f5eee5;
+    background: linear-gradient(145deg, rgba(79, 49, 34, .7), rgba(37, 23, 17, .6) 58%, rgba(27, 18, 15, .72));
+    border: 1px solid rgba(239, 222, 199, .66);
+    border-radius: 17px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, .14);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.ubicacion-panel .contacto-card {
+    height: 100%;
+    min-height: 378px;
+    padding: 20px 24px 24px;
+}
+
+.ubicacion-card .contacto-icono {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 6px;
+    border: 1px solid rgba(229, 196, 150, .65);
+    background: rgba(47, 30, 21, .55);
+    border-radius: 50%;
+}
+
+.ubicacion-card .contacto-icono svg {
+    width: 19px;
+    height: 19px;
+}
+
+.ubicacion-card h3,
+.contacto-grid .contacto-card h3 {
+    color: #f5eee5;
+}
+
+.ubicacion-card h3 {
+    font-size: 27px;
+    margin-bottom: 6px;
+}
+
+.ubicacion-card p {
+    color: rgba(245, 238, 229, .68);
+    font-size: 11px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.ubicacion-card > .contacto-link {
+    display: block;
+    color: #f2e5d3;
+    font-size: 11px;
+    line-height: 18px;
+    margin-bottom: 16px;
+}
+
+.contacto-mapa {
+    height: 200px;
+    max-width: none;
+    margin: 0;
+    border: 1px solid rgba(239, 222, 199, .4);
+    border-radius: 12px;
+}
+
+.contacto-mapa iframe {
+    filter: sepia(.08) saturate(.9) contrast(1.02);
+}
+
+.reserva-panel {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    padding: 24px;
+}
+
+.reserva-heading {
+    margin-bottom: 16px;
+}
+
+.reserva-heading .seccion-tag {
+    color: #f0dfc6;
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin-bottom: 2px;
+}
+
+.reserva-heading h2 {
+    margin-top: 0;
+    color: #f5eee5;
+    font-size: clamp(30px, 3vw, 38px);
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+}
+
+.reserva-form {
+    gap: 8px 10px;
+}
+
+.form-field {
+    gap: 3px;
+}
+
+.form-field label {
+    color: rgba(250, 241, 230, .88);
+    font-size: 10px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    border: 1px solid rgba(238, 218, 190, .36);
+    border-radius: 8px;
+    padding: 9px 10px;
+    background: rgba(255, 247, 236, .08);
+    color: #fff8ef;
+    font-size: 11px;
+}
+
+.form-field select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #ead7b9 50%), linear-gradient(135deg, #ead7b9 50%, transparent 50%);
+    background-position: right 14px center, right 9px center;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 247, 236, .08);
+    padding-right: 30px;
+    color-scheme: dark;
+}
+
+.form-field select:invalid {
+    color: rgba(250, 241, 230, .72);
+}
+
+.form-field select option {
+    background: #38261e;
+    color: #f5eee5;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: rgba(250, 241, 230, .64);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #ead7b9;
+    box-shadow: 0 0 0 3px rgba(234, 215, 185, .12);
+}
+
+.form-field textarea {
+    height: 76px;
+    min-height: 76px;
+}
+
+.privacy-check {
+    gap: 7px;
+    color: rgba(250, 241, 230, .86);
+    font-size: 9px;
+}
+
+.privacy-check input {
+    width: 13px;
+    height: 13px;
+    accent-color: #c9a86a;
+}
+
+.reserva-button {
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #f0ddbb, #c49a60);
+    color: #2d1b15;
+    font-size: 9px;
+}
+
+.contacto-grid {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 126px));
+    justify-content: center;
+    gap: 24px;
+    margin-top: 4px;
+}
+
+.contacto-grid .contacto-card {
+    min-height: 106px;
+    padding: 12px 8px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(109, 77, 49, .62), rgba(51, 34, 25, .62));
+    border-color: rgba(226, 199, 166, .38);
+}
+
+.contacto-grid .contacto-card:hover {
+    background: linear-gradient(145deg, rgba(129, 91, 56, .72), rgba(63, 41, 28, .72));
+}
+
+.contacto-grid .contacto-icono {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    margin-bottom: 5px;
+}
+
+.contacto-grid .contacto-icono svg {
+    width: 19px;
+    height: 19px;
+}
+
+.contacto-grid .contacto-card h3 {
+    font-size: 17px;
+    margin-bottom: 1px;
+}
+
+.contacto-grid .contacto-link {
+    color: #f5eee5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.whatsapp-color {
+    background: rgba(72, 92, 43, .58);
+    color: #f1e8d6;
+}
+
+.instagram-color {
+    background: rgba(128, 63, 59, .56);
+    color: #f1e8d6;
+}
+
+.correo-color {
+    background: rgba(159, 112, 57, .48);
+    color: #f1e8d6;
+}
+
+#campoCategoria .categoria-pill {
+    color: #f5eee5;
+    background: rgba(234, 215, 185, .12);
+}
+
+#campoCategoria .categoria-add {
+    border-color: #ead7b9;
+    color: #ead7b9;
+}
+
+@media (max-width: 900px) {
+    .contacto-hero {
+        padding-top: 175px;
+    }
+
+    .contacto-seccion {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 24px 56px;
+    }
+
+    .ubicacion-panel,
+    .reserva-panel {
+        margin: 0;
+    }
+
+    .ubicacion-panel .contacto-card {
+        min-height: 100%;
+    }
+
+    .contacto-grid {
+        grid-template-columns: repeat(3, minmax(0, 126px));
+        margin: 4px 0 0;
+    }
+
+    .reserva-panel {
+        order: 2;
+    }
+
+    .contacto-grid {
+        order: 3;
+    }
+}
+
+/* Mantiene visibles los controles y muestra el fondo translúcido al desplazarse. */
+#navbar {
+    background: transparent;
+    box-shadow: none;
+    transition: background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+body #navbar.scrolled {
+    background: rgba(37, 22, 16, .24);
+    box-shadow: none;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+@media (max-width: 640px) {
+    .contacto-hero {
+        padding: 145px 6% 24px;
+    }
+
+    .contacto-hero h1 {
+        font-size: 38px;
+    }
+
+    .contacto-hero p {
+        max-width: 330px;
+        font-size: 13px;
+    }
+
+    .contacto-seccion {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6% 48px;
+        gap: 16px;
+    }
+
+    .ubicacion-panel .contacto-card {
+        min-height: auto;
+    }
+
+    .contacto-mapa {
+        height: 190px;
+    }
+
+    .reserva-panel {
+        padding: 22px 18px;
+    }
+
+    .reserva-form {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-field-full,
+    .privacy-check,
+    .reserva-button {
+        grid-column: auto;
+    }
+
+    .form-field label,
+    .privacy-check {
+        font-size: 11px;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        padding: 10px 11px;
+        font-size: 12px;
+    }
+
+    .form-field textarea {
+        height: 100px;
+        min-height: 100px;
+    }
+
+    .reserva-button {
+        width: auto;
+        justify-self: center;
+    }
+
+    .contacto-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        gap: 10px;
+        margin: 4px 0 0;
+    }
+
+    .contacto-grid .contacto-card {
+        min-width: 0;
+    }
+}

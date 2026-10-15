@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio — Aura Glam Studio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="1025x1025">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body class="intro-activa pagina-inicio">
+
+    <div class="logo-intro" id="logoIntro" aria-hidden="true">
+        <div class="intro-atmosfera" aria-hidden="true"></div>
+        <span class="intro-brillo intro-brillo-one" aria-hidden="true">✦</span>
+        <span class="intro-brillo intro-brillo-two" aria-hidden="true">✧</span>
+        <span class="intro-brillo intro-brillo-three" aria-hidden="true">✦</span>
+        <span class="intro-brillo intro-brillo-four" aria-hidden="true">✧</span>
+        <span class="intro-brillo intro-brillo-five" aria-hidden="true">✦</span>
+        <svg class="logo-intro-svg" aria-hidden="true">
+            <defs>
+                <filter id="logoDeform" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="10" result="noise">
+                        <animate attributeName="seed" values="10;16;10" dur="1.5s" repeatCount="indefinite" />
+                    </feTurbulence>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="logo-intro-marco" id="logoIntroMarco">
+            <img class="logo-intro-img" src="img/Logoblanco.png.png" alt="Aura Glam Studio">
+            <span class="logo-intro-brillo" aria-hidden="true"></span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav id="navbar">
+            <a href="index.html" class="nav-logo" aria-label="Aura Glam Studio">
+                <img src="img/logo-blanco.png" alt="Aura Glam Studio" class="nav-logo-img" id="navLogoImg">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html"     class="nav-link activo-link">Inicio</a></li>
+                <li><a href="nosotros.html"  class="nav-link">Quiénes somos</a></li>
+                <li><a href="menu.html"      class="nav-link">Menú</a></li>
+                <li><a href="contacto.html"  class="nav-link">Contáctanos</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+        <div class="nav-mobile" id="navMobile">
+            <a href="index.html"    class="nav-link-mobile">Inicio</a>
+            <a href="nosotros.html" class="nav-link-mobile">Quiénes somos</a>
+            <a href="menu.html"     class="nav-link-mobile">Menú</a>
+            <a href="contacto.html" class="nav-link-mobile">Contáctanos</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="deco-circle deco-top-right"></div>
+        <div class="hero-burbujas" id="heroBurbujas"></div>
+        <div class="hero-contenido">
+            <span class="hero-tag">Salón de Belleza · Cali</span>
+            <h1>Belleza elegante,<br><em>resultados que inspiran.<span class="hero-sparkle hero-sparkle-one" aria-hidden="true">✦</span><span class="hero-sparkle hero-sparkle-two" aria-hidden="true">✧</span><span class="hero-sparkle hero-sparkle-three" aria-hidden="true">✧</span><span class="hero-sparkle hero-sparkle-four" aria-hidden="true">✦</span></em></h1>
+            <p>Maquillaje, cuidado capilar y asesoría de belleza diseñados para resaltar tu esencia.</p>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: Es más que belleza -->
+    <section class="beauty-essence">
+        <img class="story-decor story-decor-flowers scroll-reveal scroll-reveal-left" src="img/piedrayflor.jpeg" alt="" aria-hidden="true">
+        <img class="story-decor story-decor-tree scroll-reveal scroll-reveal-right" src="img/tronco.jpeg" alt="" aria-hidden="true">
+        <div class="beauty-essence-inner">
+            <div class="beauty-story" aria-label="Nuestra historia">
+                <div class="story-content scroll-reveal scroll-reveal-right">
+                    <div class="story-kicker-wrap">
+                        <span class="story-kicker">SOBRE AURA GLAM STUDIO</span>
+                        <span class="story-kicker-line" aria-hidden="true"></span>
+                    </div>
+
+                    <h2 class="story-title">
+                        <span>Nuestra</span>
+                        <span class="story-title-italic">historia<span class="story-sparkle story-sparkle-one" aria-hidden="true">✦</span><span class="story-sparkle story-sparkle-two" aria-hidden="true">✧</span></span>
+                    </h2>
+
+                    <span class="story-divider" aria-hidden="true"></span>
+
+                    <p>
+                        Aura Glam Studio nació en Bogotá en agosto de 2024, como un pequeño proyecto con grandes sueños. Desde el inicio, nuestro propósito ha sido crear un espacio donde cada persona se sienta especial, cuidada y segura.
+                    </p>
+                    <p>
+                        En mayo de 2026 iniciamos un nuevo capítulo en Cali, trayendo con nosotros la misma pasión por la belleza y el compromiso de seguir creciendo junto a ustedes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISTA RÁPIDA: tarjetas con video de fondo -->
+    <section class="highlights">
+        <video class="highlights-background" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="MULTIMEDIA/videofondo.mp4" type="video/mp4">
+        </video>
+        <div class="highlights-header">
+            <span class="section-kicker scroll-reveal scroll-reveal-left" id="tituloLoQueHacemos">Lo que hacemos</span>
+        </div>
+
+        <div class="highlights-row">
+            <div class="highlight-card scroll-reveal scroll-reveal-left">
+            <span class="corner-logo corner-top-left"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+            <span class="corner-logo corner-top-right"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+            <span class="corner-logo corner-bottom-left"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+            <span class="corner-logo corner-bottom-right"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+            <video class="hl-video" autoplay muted loop playsinline>
+                <source src="VIDEOS/cabello.mp4.mp4" type="video/mp4">
+            </video>
+            <div class="hl-overlay"></div>
+            <div class="hl-contenido">
+                <h3>Tratamiento Capilar</h3>
+                <p>Un ritual para un cabello sano, con brillo y un estilo que va contigo.</p>
+                <a href="menu.html#servicios" class="hl-link">DESCUBRIR</a>
+            </div>
+        </div>
+
+            <div class="highlight-card scroll-reveal scroll-reveal-right">
+                <span class="corner-logo corner-top-left"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-top-right"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-bottom-left"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-bottom-right"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <video class="hl-video" autoplay muted loop playsinline>
+                    <source src="VIDEOS/maquillaje.mp4.mp4" type="video/mp4">
+                </video>
+                <div class="hl-overlay"></div>
+                <div class="hl-contenido">
+                    <h3>Maquillaje</h3>
+                    <p>Realzamos tu belleza natural con un acabado glow para cualquier ocasión.</p>
+                    <a href="menu.html#servicios" class="hl-link">DESCUBRIR</a>
+                </div>
+            </div>
+
+            <div class="highlight-card scroll-reveal scroll-reveal-left">
+                <span class="corner-logo corner-top-left"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-top-right"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-bottom-left"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-bottom-right"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <video class="hl-video" autoplay muted loop playsinline>
+                    <source src="VIDEOS/asesoria1.mp4.mp4" type="video/mp4">
+                </video>
+                <div class="hl-overlay"></div>
+                <div class="hl-contenido">
+                    <h3>Asesoría de Belleza</h3>
+                    <p>Descubre qué te favorece y cómo cuidarte con un plan innovador para ti.</p>
+                    <a href="menu.html#servicios" class="hl-link">DESCUBRIR</a>
+                </div>
+            </div>
+
+            <div class="highlight-card scroll-reveal scroll-reveal-right">
+                <span class="corner-logo corner-top-left"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-top-right"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-bottom-left"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <span class="corner-logo corner-bottom-right"><img src="img/logo-blanco.png" alt="Aura Glam Studio"></span>
+                <video class="hl-video" autoplay muted loop playsinline>
+                    <source src="VIDEOS/uñas.mp4.mp4" type="video/mp4">
+                </video>
+                <div class="hl-overlay"></div>
+                <div class="hl-contenido">
+                    <h3>Uñas</h3>
+                    <p>Manos impecables con nuestros diseños signature que enamoran.</p>
+                    <a href="menu.html#servicios" class="hl-link">DESCUBRIR</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SECCIÓN 4: ¿Qué Aura tienes hoy? -->
+    <section class="aura-moment" id="aura-moment">
+        <div class="aura-moment-inner">
+            <div class="aura-copy scroll-reveal scroll-reveal-left">
+                <span class="section-kicker">TU MOMENTO AURA</span>
+                <h2>¿Qué Aura tienes <span class="aura-title-hoy">hoy?</span></h2>
+                <p>Cada día es una nueva versión de ti.</p>
+            </div>
+
+            <div class="aura-right-panel scroll-reveal scroll-reveal-right">
+                <h3 class="aura-grid-title">CATEGORÍA DE NUESTROS SERVICIOS</h3>
+
+                <div class="aura-grid">
+                    <div class="aura-card" data-categoria="SOFT" role="button" tabindex="0">
+                        <span class="aura-icon">✦</span>
+                        <h3>SOFT</h3>
+                        <p>Suave — Natural — Delicada</p>
+                        <div class="aura-hover-panel">
+                            <strong>SOFT:</strong> Suave, Natural, Delicada. Maquillaje natural con base ligera, tonos nude y rosados, pestañas sutiles. Cabello: ondas suaves o liso natural.
+                        </div>
+                    </div>
+                    <div class="aura-card" data-categoria="BOLD" role="button" tabindex="0">
+                        <span class="aura-icon">A</span>
+                        <h3>BOLD</h3>
+                        <p>Segura — Intensa — Atrevida</p>
+                        <div class="aura-hover-panel">
+                            <strong>BOLD:</strong> Segura, Intensa, Atrevida. Maquillaje de impacto con contour marcado, ojos ahumados, labios rojos o intensos. Cabello: liso pulido o ondas marcadas.
+                        </div>
+                    </div>
+                    <div class="aura-card" data-categoria="GLOW" role="button" tabindex="0">
+                        <span class="aura-icon">✧</span>
+                        <h3>GLOW</h3>
+                        <p>Radiante — Fresca — Luminosa</p>
+                        <div class="aura-hover-panel">
+                            <strong>GLOW:</strong> Radiante, Fresca, Luminosa. Piel jugosa e iluminada, tonos bronces y dorados, gloss. Cabello: beach waves o efecto mojado.
+                        </div>
+                    </div>
+                    <div class="aura-card" data-categoria="CLASSIC" role="button" tabindex="0">
+                        <span class="aura-icon">◌</span>
+                        <h3>CLASSIC</h3>
+                        <p>Elegante — Atemporal — Sofisticada</p>
+                        <div class="aura-hover-panel">
+                            <strong>CLASSIC:</strong> Elegante, Atemporal, Sofisticada. Maquillaje equilibrado, eyeliner clásico, labial rojo o nude. Cabello: chongo bajo u ondas Hollywood.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: Experiencias que inspiran -->
+    <section class="reviews-section">
+        <canvas class="reviews-particle-frame" aria-hidden="true"></canvas>
+        <div class="reviews-layout">
+            <div class="reviews-copy scroll-reveal scroll-reveal-left">
+                <span class="reviews-side-label">TESTIMONIOS</span>
+                <div class="reviews-header">
+                    <h2>Experiencias<br><em>que inspiran.</em></h2>
+                    <p>Historias reales de clientas que han transformado su piel, confianza y rutina con nuestros tratamientos.</p>
+                </div>
+                <div class="reviews-trust-stats" aria-label="Indicadores de confianza">
+                    <div class="stat-item stat-rating">
+                        <div class="stat-content">
+                            <p class="stat-score">4.9 <span aria-label="estrellas">★</span> +200</p>
+                            <p class="stat-label">Valoración promedio</p>
+                        </div>
+                        <div class="stat-shine" aria-hidden="true"></div>
+                    </div>
+                    <div class="stat-item stat-clients">
+                        <div class="stat-content">
+                            <p class="stat-score">+10K</p>
+                            <p class="stat-label">Clientes felices</p>
+                        </div>
+                        <div class="stat-shine" aria-hidden="true"></div>
+                    </div>
+                    <div class="stat-item stat-satisfaction">
+                        <div class="stat-content">
+                            <p class="stat-score">100%</p>
+                            <p class="stat-label">Satisfacción garantizada</p>
+                        </div>
+                        <div class="stat-shine" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="reviews-navigation" aria-label="Navegación de testimonios">
+                    <button class="slider-arrow" type="button" data-review-prev aria-label="Grupo anterior">←</button>
+                    <span class="reviews-page" aria-live="polite">01 / 03</span>
+                    <button class="slider-arrow" type="button" data-review-next aria-label="Grupo siguiente">→</button>
+                </div>
+            </div>
+
+            <div class="testimonial-slider scroll-reveal scroll-reveal-right" aria-label="Testimonios de clientes">
+                <div class="testimonial-cards" aria-live="polite">
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 de 5 estrellas"></div>
+                        <p class="testimonial-quote"></p>
+                        <h4 class="testimonial-name"></h4>
+                        <span class="testimonial-tag"></span>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 de 5 estrellas"></div>
+                        <p class="testimonial-quote"></p>
+                        <h4 class="testimonial-name"></h4>
+                        <span class="testimonial-tag"></span>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 de 5 estrellas"></div>
+                        <p class="testimonial-quote"></p>
+                        <h4 class="testimonial-name"></h4>
+                        <span class="testimonial-tag"></span>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer footer-simple">
+        <div class="footer-socials" aria-label="Redes sociales">
+            <a class="footer-social-link" href="https://instagram.com/Auraglamstudio_cali" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <span class="footer-social-icon" role="img" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 8.4a7.1 7.1 0 0 1-4.4-1.5v8.3a5.6 5.6 0 1 1-4.8-5.5v3.1a2.5 2.5 0 1 0 1.7 2.4V2.5h3.1c.2 2.1 1.9 3.8 4.4 4.1z"/></svg></span>
+            <span class="footer-social-icon" role="img" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.5 8.5H13V6.7c0-.7.4-.9.8-.9h1.7V3.2l-2.3-.1c-2.5 0-3 1.9-3 3.1v2.3H8.4v2.8h1.8v7.2H13v-7.2h2.1z"/></svg></span>
+            <span class="footer-social-icon" role="img" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.1a3 3 0 0 0-2.1-2.2C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7.1 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.9 3 3 0 0 0 2.1 2.2c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.2 31 31 0 0 0 .5-4.9 31 31 0 0 0-.5-4.9zM9.8 15.4V8.6l5.8 3.4z"/></svg></span>
+        </div>
+        <div class="footer-simple-row scroll-reveal scroll-reveal-left">
+            <div class="footer-brand-block">
+                <img src="img/Logoblanco.png.png" alt="Aura Glam Studio" class="footer-logo-img">
+            </div>
+
+            <div class="footer-contact-list">
+                <a class="footer-contact-item" href="mailto:auraglamstudio.official@gmail.com">
+                    <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+                    <span>auraglamstudio.official<wbr>@gmail.com</span>
+                </a>
+                <div class="footer-contact-item">
+                    <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <a href="https://wa.me/573235461229" target="_blank" rel="noreferrer">+57 323 546 1229</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    <a href="https://instagram.com/Auraglamstudio_cali" target="_blank" rel="noreferrer">@Auraglamstudio_cali</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Av. Roosevelt #44 37 2 Bis, San Fernando, Cali, Valle del Cauca</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copyright">© 2026 Aura Glam Studio. Todos los derechos reservados.</span>
+            <div class="footer-legal"><span>Política de privacidad</span><span>Términos y condiciones</span></div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/inicio.js"></script>
+</body>
+</html>

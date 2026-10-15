@@ -1,0 +1,91 @@
+/* ==========================================
+   AURA GLAM STUDIO — mision.css
+   Estilos exclusivos de mision.html
+========================================== */
+
+/* ── ENCABEZADO ── */
+.page-hero-dark {
+    height: 320px;
+    background: var(--cafe-oscuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+.page-hero-dark h1 {
+    font-size: 62px;
+    color: var(--crema);
+    letter-spacing: -1px;
+}
+
+/* ── MISIÓN Y VISIÓN ── */
+.mision-vision {
+    padding: 110px 10%;
+    background: var(--cafe-oscuro);
+    text-align: center;
+}
+.mv-grid {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mv-card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(200,160,80,.2);
+    border-radius: var(--radio);
+    padding: 50px 44px;
+    max-width: 500px;
+    flex: 1;
+    min-width: 260px;
+    text-align: left;
+    transition: background var(--transicion), transform var(--transicion);
+}
+.mv-card:hover {
+    background: rgba(255,255,255,.10);
+    transform: translateY(-8px);
+}
+.mv-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 26px;
+}
+.mv-icon-mision { background: var(--rojo); }
+.mv-icon-vision { background: var(--verde); }
+
+.mv-card h3 {
+    font-size: 36px;
+    color: var(--crema);
+    margin-bottom: 18px;
+}
+.mv-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #b0a89f;
+}
+
+/* Retrasos reveal */
+.mv-grid .mv-card:nth-child(1) { transition-delay: .0s; }
+.mv-grid .mv-card:nth-child(2) { transition-delay: .15s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .mv-grid { flex-direction: column; align-items: center; }
+    .page-hero-dark h1 { font-size: 46px; }
+}
+@media (max-width: 640px) {
+    .mision-vision { padding: 70px 6%; }
+    .mv-card { padding: 36px 28px; }
+    .page-hero-dark { height: 260px; }
+    .page-hero-dark h1 { font-size: 36px; }
+}
